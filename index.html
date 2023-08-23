@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amirul Azizol</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header style="margin-top: 55px;">
+    <h1>Amirul Azizol</h1>
+    <p></p><a href="https://mail.google.com/">contact@amirul.dev</a> | (+60) 12-483 2940 | <a href="https://github.com/brightcosmo" target="_blank">Github</a> | <a href="https://www.linkedin.com/in/amirulazizol/" target="_blank2">Linkedin</a></p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills & Projects</a></li>
+      <li><a href="#work">Work Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#extracurriculars">Extracurriculars</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <section id="about" class="fade-in-up-scroll" style="margin-top: 0px;">
+      <h2 style="margin-top: 0;">About Me</h2>
+      <p>
+        I am a second year student pursuing a bachelor's in Computer Science. I am proficient in English and Malay, and I have years of experience in numerous programming languages, software, and other skills listed below. I have a passion for software development, cybersecurity, and data science but am eager to develop my skills in a variety of tech fields. I aspire to be a software developer or a cybersecurity expert in the future.
+      </p>
+    </section>
+    <section id="skills" class="fade-in-up-scroll">
+      <h2>Skills & Projects</h2>
+      <p><strong>Skills:</strong> HTML & CSS, Cybersecurity, Mobile App Development, UI/UX design (Figma), Database Management, Data Visualization (Tableau), Scrum & Agile Framework</p>
+      <p><strong>Programming Languages:</strong> Python, Java, Javascript, R, Typescript, Haskell</p>
+      <p><strong>Projects:</strong> KitaHack 2023 Participant - Our team developed an app called Vital Vision, a health-focused smartphone app that uses photoplethysmography to detect the user's heart rate without special equipment.</p>
+    </section>
+    <section id="work" class="fade-in-up-scroll">
+      <h2>Work Experience</h2>
+        <p><strong>Monash University - FIT1045 Tutor</strong> (Feb. 2023 – Present)</p>
+      <ul>
+        <li>Tutored junior students for FIT1045 (Introduction to programming)</li>
+        <li>Provided online lessons, additional study materials, and general advice for the unit</li>
+        <li>Also acted as a student mentor from Feb 2023 - March 2023</li>
+      </ul>
+    </section>
+    <section id="education" class="fade-in-up-scroll">
+      <h2>Education</h2>
+      <p><strong>Monash University - Bachelor of Computer Science</strong> (Feb. 2022 – Present)</p>
+      <ul>
+        <li>Major in computer science, minor in cybersecurity</li>
+        <li>Recipient of Monash High Achiever Award (top 1%)</li>
+        <li>CGPA / GPA: 4.0</li>
+        <li>Weighted Average Mark: 89.3</li>
+    </ul>
+    <p><strong>Sunway College - Monash University Foundation Year</strong> (Jan. 2021 – Nov. 2021)</p>
+    <ul>
+        <li>Recipient of Jeffrey Cheah Entrance Scholarship</li>
+        <li>Overall Mark: 94</li>
+      </ul>
+    </section>
+    <section id="extracurriculars" class="fade-in-up-scroll">
+      <h2>Extracurriculars</h2>
+      <p><strong>Monash Tennis Club - Secretary</strong> (Feb. 2023 – Present)</p>
+      <ul>
+        <li>Produced a CNS proposal to revive the previously disbanded club</li>
+        <li>Managed basic administrative tasks such as membership registration, hiring coaches, booking venues etc</li>
+        </ul>
+        <p><strong>Monash Robotics Club - Activities Subcommittee</strong> (Aug. 2023 – Present)</p>
+        <ul>
+        <li>Responsible for 3D printing for events</li>
+        </ul>
+        <p><strong>Monash Career Peer - Public Relations Officer</strong> (Jan. 2023 – Jun. 2023)</p>
+        <ul>
+        <li>Sought internship opportunities for club members weekly</li>
+        <li>Helped liaise with external parties and companies for club events</li>
+    </ul>
+        <p><strong>Monash Cup Tournament - Esports Caster</strong> (Aug. 2023 – Sep. 2023)</p>
+    <ul>
+        <li>Provided live commentary and analysis during matches</li>
+        <li>Interviewed winning teams and assisted with production/observing</li>
+      </ul>
+    </section>
+  </div>
+<script>
+  // Smooth scroll function
+  function smoothScroll(targetOffset) {
+    window.scrollTo({
+      top: targetOffset,
+      behavior: 'smooth'
+    });
+  }
+
+  // Scroll to section on navigation click
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetSection = document.querySelector(this.getAttribute('href'));
+      const targetOffset = targetSection.offsetTop - 60; // Adjust the offset as needed
+      smoothScroll(targetOffset);
+    });
+  });
+
+  // Apply animations when sections come into view
+  const sections = document.querySelectorAll('.fade-in-up-scroll');
+  sections.forEach((section, index) => {
+    section.style.animation = `fadeInUp 1s ease-in-out ${index * 0.2}s forwards`; // Adjust the delay as needed
+  });
+
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+</script>
+  
+</body>
+</html>
