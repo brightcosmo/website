@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other Stuff</title>
+    <link rel = "stylesheet" href = "css/styles.css"/>
+    <link rel = "stylesheet" href = "css/otherstuff.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/images/favicon.ico" rel="icon" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <a href = "index.html"> Home </a>
+        <a href = "projects.html"> Projects</a>
+        <a href = "unitreviews.html"> Unit Reviews </a>
+        <a href = "otherstuff.html"> Other Stuff </a>
+    </header>
+    <main>
+        <div class = "otherstuffs-container">
+            <div class = "otherstuff-container" id = "playlist-container">
+                <div class="playlist-header">
+                    <span>Current playlist</span>
+                    <button id="random-playlist">Random</button>
+                </div>
+                <div id="playlist"></div>
+            </div>
+            <div class = "otherstuff-container">
+                My tech gear
+                <ul>
+                    <li>Macbook Air M2 15"</li>
+                    <li>Dell Inspiron 5620 16"</li>
+                    <li>Apple Watch SE 2022</li>
+                    <li>Logitech G304</li>
+                    <li>Sony XB910M</li>
+                    <li>Airpods Pro 2</li>
+                </ul>
+            </div>
+            <div class = "otherstuff-container">
+                My PC
+                <ul>
+                    <li>CPU: i3-10100F</li>
+                    <li>GPU: GeForce GTX 1660 Super</li>
+                    <li>Motherboard: Gigabyte GA-H410M-H</li>
+                    <li>RAM: Corsair Vengeance LPX 3000MHz 16GB RAM</li>
+                    <li>Keyboard: Corsair MK730 (Cherry MX Brown)</li>
+                    <li>Mouse: Logitech G703</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <a href = "mailto:amirulazizol.dev@gmail.com" class = "fa fa-envelope"></a>
+        </div>
+        <div>
+            <a href="https://www.linkedin.com/in/amirulazizol/" class = "fa fa-linkedin" target = "_blank"></a>
+        </div>
+        <div>
+            <a href = "https://github.com/brightcosmo" class = "fa fa-github" target = "_blank"></a>
+        </div>
+        <div>
+            <a href="https://www.instagram.com/amirul.4z/" class="fa fa-instagram" target = "_blank"></a>
+        </div>
+    </footer>
+    <script>
+        const playlistIds = [
+            '0XUOKS1T5mpFwnGix3mSB1', // ikigai
+            '0uQgbweG56sDNjkL1gu73C', // kunnianhimoa
+            '7rnB7YemC9C9RmSTUqBkgW', // china
+            '6VbIGQK2aU8gXajJcwJInw', // riddle order
+            '2wMXhyyaCiOMna8wRFyM4l'  // project 2025
+        ];
+    
+        let currentId = -1;
+    
+        function getRandomPlaylistUrl(ids) {
+            let newId;
+            do {
+                newId = Math.floor(Math.random() * ids.length);
+            } while (newId === currentId);
+            currentId = newId; 
+            return `https://open.spotify.com/embed/playlist/${ids[newId]}`;
+        }
+    
+        function displayPlaylist() {
+            const playlistUrl = getRandomPlaylistUrl(playlistIds);
+            document.getElementById('playlist').innerHTML = 
+                `<iframe style="border-radius:12px" src="${playlistUrl}" width="100%" height="600" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
+        }
+    
+        document.getElementById('random-playlist').addEventListener('click', displayPlaylist);
+    
+        displayPlaylist();
+    </script>
+    
+</body>
+</html>

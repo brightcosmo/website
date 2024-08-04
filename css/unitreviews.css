@@ -1,0 +1,28 @@
+.reviews-container{
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content: center;
+    min-height: 500px;
+    white-space: nowrap;
+    padding: 10px;
+    gap:10px;
+}
+
+.review-container{
+    display:flex;
+    flex-direction:column;
+    white-space: pre-line;
+
+    min-width: 300px;
+    min-height: 500px;
+    white-space: pre-line;
+    border: 2px solid black;
+    border-radius:6px;
+    padding: 10px;
+    font-size: 25px;
+}
+
+ul {
+    padding-left: 40px;
+}

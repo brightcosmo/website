@@ -1,0 +1,72 @@
+@keyframes typing {
+    from {width: 0}
+    to {width: 35%}
+}
+@font-face {
+    font-family: 'Omori';
+    src: url('../fonts/omori.ttf') format('truetype');
+}
+
+.text-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    white-space: pre-line;
+    margin: 20px;
+    min-height: 50%;
+    max-width: 100%;
+    padding: 0;
+}
+
+.hi-container {
+    overflow:hidden;
+    justify-content: center;
+    flex-direction:row;
+    white-space: nowrap;
+    align-items: center;
+    width: 0;
+    animation: typing 1s steps(35, end) forwards;
+}
+
+.hi-text {
+    font-size: 3rem;
+    text-wrap: wrap;
+    font-family: 'Omori';
+}
+
+.hi-image {
+    max-width: 50%;
+    max-height: 50%;
+    object-fit: contain;
+}
+
+.about-text {
+    display: flex;
+    flex-direction:column; 
+    font-size: 1.8rem;
+    margin: 1.5rem;
+    justify-content: center;
+    text-transform: none;
+    color: black;
+    text-wrap: wrap;
+    max-width: 55%;
+}
+
+ul {
+    padding-left: 40px;
+}
+
+.about-page::before {
+    content: '';
+    position: absolute;
+    top: -4%;
+    left: 10%;
+    width: 20%;
+    height: 45%;
+    background-image: url('../images/bulb3_2.png');
+    background-size: cover;
+    background-position: center center;
+    opacity: 1;
+    z-index: -1;
+}
