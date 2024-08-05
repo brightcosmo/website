@@ -62,6 +62,7 @@ main {
     backdrop-filter: blur(8px);
     overflow: scroll;
     padding: 0px;
+    overflow-y: hidden;
 }
 
 main::before {

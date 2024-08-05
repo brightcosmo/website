@@ -2,9 +2,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>amirul.dev</title>
     <link rel = "stylesheet" href = "css/styles.css"/>
     <link rel = "stylesheet" href = "css/about.css"/>
+    <link rel = "stylesheet" href = "css/projects.css"/>
+    <link rel = "stylesheet" href = "css/unitreviews.css"/>
+    <link rel = "stylesheet" href = "css/otherstuff.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="/images/favicon.ico" rel="icon" type="image/x-icon">
     <html xmlns="http://www.w3.org/1999/xhtml"
@@ -13,35 +16,12 @@
 </head>
 <body>
     <header>
-        <a href = "index.html"> Home </a>
-        <a href = "projects.html"> Projects</a>
-        <a href = "unitreviews.html"> Unit Reviews </a>
-        <a href = "otherstuff.html"> Other Stuff </a>
+        <a href="#" onclick="loadContent('about')">Home</a>
+        <a href="#" onclick="loadContent('projects')">Projects</a>
+        <a href="#" onclick="loadContent('unitreviews')">Unit Reviews</a>
+        <a href="#" onclick="loadContent('otherstuff')">Other Stuff</a>
     </header>
-    <main class="about-page">
-        <div class = 'text-container'>
-            <div class = 'hi-container'>
-                <div class = 'hi-text'>
-                    I'm Amirul. <br> I don't wait for things to happen.
-                </div>
-            </div>
-            <div class = 'about-text'>
-                I am a software engineer / future researcher pursuing a bachelor's degree in Computer Science at Monash University.
-                
-                My time spent growing up as a third culture kid has provided me with a wide range of diverse experiences and perspectives. I also have a lot of working experience from internships and teaching roles.
-                
-                My main interests lie in machine learning, cybersecurity, and blockchain. I'm really interested in learning and teaching, and in the future I want to be involved in researching and contributing to emerging tech fields.
-
-                <div style = "white-space: nowrap;">Here's my <a target = "_blank" href = "documents/Amirul_Resume.pdf">Resume</a>.</div>                
-                Currently, I'm:
-                <ul>
-                    <li> Studying Advanced Data Structures and Algorithms (FIT3155), Parallel Computing (FIT3143), and working on my Final Year Project (FIT3161)</li>
-                    <li> Working as a Freelance software engineer for Wavelet Solutions, and TA for Theory of Computation (FIT2014) </li>
-                    <li> Participating in a BUNCH of hackathons </li>
-                </ul>
-            </div>
-        </div>
-    </main>
+    <main class="content" id="content"></main>
     <footer>
         <div>
             <a href = "mailto:amirulazizol.dev@gmail.com" class = "fa fa-envelope"></a>
@@ -56,5 +36,6 @@
             <a href="https://www.instagram.com/amirul.4z/" class="fa fa-instagram" target = "_blank"></a>
         </div>
     </footer>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
