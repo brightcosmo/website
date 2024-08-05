@@ -6,13 +6,13 @@
 
 @keyframes gradient {
 	0% {
-		background-position: 0% 50%;
+		background-position: 50% 0%;
 	}
 	50% {
-		background-position: 100% 50%;
+		background-position: 50% 100%;
 	}
 	100% {
-		background-position: 0% 50%;
+		background-position: 50% 0%;
 	}
 }
 
@@ -55,8 +55,8 @@ main {
     min-height: 86%;
     min-width: 100%;
 
-    background: linear-gradient(135deg, #fefbff, #a168f9, #c8a4e9, #f6c0f8, #9ec5e2, #fefbff);
-	background-size: 400% 400%;
+    background: linear-gradient(135deg,#a168f9, #a168f9, #c8a4e9, #f6c0f8, #9ec5e2, #fefbff, #fefbff);
+	background-size: 350% 350%;
 	animation: gradient 10s ease infinite;
 
     backdrop-filter: blur(8px);
@@ -89,15 +89,14 @@ footer {
     min-width: 100%;
     
     background-color: rgb(221, 221, 251);
+    font-size: 30px;
 }
 
 .fa {
     padding: 20px;
-    font-size: 50px;
     width: 100px;
     text-align: center;
     text-decoration: none;
-    height: 100px;
   }
   
   .fa:hover {
